@@ -1,8 +1,5 @@
 require("config.lazy")
 
--- Colour Scheme
-vim.cmd("colorscheme yugen")
-
 -- Indent Spacing
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
