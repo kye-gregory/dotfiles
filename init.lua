@@ -48,3 +48,14 @@ vim.api.nvim_create_autocmd({"BufLeave", "BufWinLeave"}, {
     end
   end
 })
+
+vim.api.nvim_create_autocmd({"BufWritePre"}, {
+    callback = function(args)
+        local file_path = vim.fn.expand('%:p')
+        local dir_path = vim.fn.fnamemodify(file_path, ':h')
+
+        if not vim.loop.fs_stat(dir_path) then
+            os.execute('mkdir -p ' .. dir_path)
+        end
+    end
+})
