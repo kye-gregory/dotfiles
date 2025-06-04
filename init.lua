@@ -13,6 +13,19 @@ vim.cmd("set cursorline")
 vim.cmd("set signcolumn=yes")
 
 
+-- Diagnostic Symbols
+vim.diagnostic.config({
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = '',
+            [vim.diagnostic.severity.WARN] = '',
+            [vim.diagnostic.severity.INFO] = '󰋇',
+            [vim.diagnostic.severity.HINT] = '󰌵',
+        },
+    },
+})
+
+
 -- Auto Set 'End Of Buffer' Character To Blank
 vim.api.nvim_create_autocmd({ "BufWinEnter", "BufEnter", "ColorScheme" }, {
   callback = function()
