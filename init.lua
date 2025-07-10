@@ -62,6 +62,7 @@ vim.api.nvim_create_autocmd({"BufLeave", "BufWinLeave"}, {
   end
 })
 
+-- Auto Create File Paths
 vim.api.nvim_create_autocmd({"BufWritePre"}, {
     callback = function(args)
         local file_path = vim.fn.expand('%:p')
@@ -71,4 +72,11 @@ vim.api.nvim_create_autocmd({"BufWritePre"}, {
             os.execute('mkdir -p ' .. dir_path)
         end
     end
+})
+
+-- Auto Format on Save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  callback = function()
+    vim.lsp.buf.format({ async = false })
+  end,
 })
