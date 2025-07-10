@@ -14,6 +14,9 @@ vim.cmd("set signcolumn=yes")
 
 -- Diagnostic Symbols
 vim.diagnostic.config({
+	virtual_text = {
+		spacing = 8,
+	},
 	signs = {
 		text = {
 			[vim.diagnostic.severity.ERROR] = "",
