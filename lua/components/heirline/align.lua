@@ -1,5 +1,5 @@
 local Align = {
-    provider = "%="
+	provider = "%=",
 }
 
 return Align

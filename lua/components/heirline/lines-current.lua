@@ -1,5 +1,5 @@
 local LinesCurrent = {
-    provider = "%l"
+	provider = "%l",
 }
 
 return LinesCurrent

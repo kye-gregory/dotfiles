@@ -1,5 +1,5 @@
 local Space = {
-    provider = " "
+	provider = " ",
 }
 
 return Space

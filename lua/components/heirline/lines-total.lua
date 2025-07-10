@@ -1,5 +1,5 @@
 local LinesTotal = {
-    provider = "%L"
+	provider = "%L",
 }
 
 return LinesTotal

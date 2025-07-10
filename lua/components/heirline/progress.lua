@@ -1,5 +1,5 @@
 local Progress = {
-    provider = "%P"
+	provider = "%P",
 }
 
 return Progress
