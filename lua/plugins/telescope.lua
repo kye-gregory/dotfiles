@@ -31,7 +31,7 @@ return {
 			vim.keymap.set("n", "<leader>o", builtin.oldfiles, {})
 			vim.keymap.set("n", "<leader>color", builtin.colorscheme, {})
 
-			require("telescope").setup({
+			telescope.setup({
 				file_ignore_patterns = { "%.git/." },
 				defaults = {
 					mappings = {
@@ -48,7 +48,7 @@ return {
 						"filename_first",
 					},
 					previewer = false,
-					file_ignore_patterns = { "node_modules", "package-lock.json" },
+					file_ignore_patterns = { "node_modules", "package-lock.json", "build/" },
 					initial_mode = "insert",
 					select_strategy = "reset",
 					sorting_strategy = "ascending",
