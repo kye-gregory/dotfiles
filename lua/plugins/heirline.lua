@@ -76,6 +76,7 @@ return {
 				filename,
 				git_changes,
 				align,
+				diagnostics,
 				lines,
 				space,
 				progress,
