@@ -1,0 +1,16 @@
+- defaults:
+    link:
+        force: true
+        glob: true
+        create: true
+
+- link:
+    ~/:
+        path: dotconf/.**
+        exclude: [ dotconf/.config ]
+
+    ~/.config:
+        path: dotconf/.config/**
+
+- clean:
+    ~/.config: true
