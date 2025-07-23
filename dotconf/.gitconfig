@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Kye Gregory
+	email = kyegregory002@gmail.com
+[diff]
+	algorithm = histogram
